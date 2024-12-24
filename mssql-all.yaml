@@ -64,7 +64,7 @@ spec:
         persistentVolumeClaim:
           claimName: mssql-backup-pvc
       imagePullSecrets:
-      - name: docker-secret
+      - name: docker-secret # DB / Schema Files copied from Local to Container via $ kubectl cp EMSDatabase_log.ldf mssql-deployment-d6f9cdfbc-zzb22:/var/opt/mssql/data -n mssql-test
 ---
 apiVersion: v1
 kind: Service
